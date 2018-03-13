@@ -1,7 +1,7 @@
 public abstract class Meter {
 
-    String regNumber, location;
-    boolean isWorking;
+    private String regNumber, location;
+    private boolean isWorking;
 
     public Meter() {
         this("Unknown", false, "Unknown");
@@ -25,7 +25,7 @@ public abstract class Meter {
         return location;
     }
 
-    private void setLocation(String location) {
+    public void setLocation(String location) {
         this.location = location;
     }
 
@@ -33,21 +33,25 @@ public abstract class Meter {
         return isWorking;
     }
 
-    private void setWorking(boolean working) {
+    public void setWorking(boolean working) {
         isWorking = working;
     }
 
     @Override
     public String toString() {
-        if(isWorking) {
-            return  "\nRegnummer: " + getRegNumber()  +
-                    "\nPlassering: " + getLocation() +
-                    "\nStatus: i orden";
-        }
-        else return
-                "\nRegnummer: " + getRegNumber() +
-                        "\nPlassering: " + getLocation() +
-                        "\nStatus: i uorden";
+        String returnString;
 
+        returnString = "\nRegnummer: " + getRegNumber() + "\nPlassering: " + getLocation();
+
+        if(isWorking) {
+
+            returnString +=  "\nStatus: i orden";
+        }
+        else {
+
+            returnString += "\nStatus: i uorden";
+        }
+
+        return returnString;
     }
 }

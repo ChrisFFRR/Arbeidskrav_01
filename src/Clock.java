@@ -1,12 +1,13 @@
 public class Clock extends Meter {
-    double minTimeInterval, maxTimeInterval;
+    private double minTimeInterval;
 
     public Clock() {
     }
-    public Clock(String regNumber, boolean isWorking, String location, double minTimeInterval, double maxTimeInterval) {
+
+    public Clock(String regNumber, boolean isWorking, String location, double minTimeInterval) {
         super(regNumber, isWorking, location);
         setMinTimeInterval(minTimeInterval);
-        setMaxTimeInterval(maxTimeInterval);
+
     }
 
     public double getMinTimeInterval() {
@@ -19,15 +20,21 @@ public class Clock extends Meter {
         }
     }
 
-    public double getMaxTimeInterval() {
-        return maxTimeInterval;
-    }
-
-    public void setMaxTimeInterval(double maxTimeInterval) {
-        this.maxTimeInterval = maxTimeInterval;
-    }
-
     public String toString() {
-        return "(Minste tidsintervall: " + getMinTimeInterval() + " - " + getMaxTimeInterval() + super.toString();
+
+
+        return "\nKlokke\n(Minste tidsintervall: " + getMinTimeInterval() + "s)" + super.toString();
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Clock)) return false;
+
+        Clock clock = (Clock) o;
+
+        return Double.compare(clock.getMinTimeInterval(), getMinTimeInterval()) == 0;
+    }
+
 }

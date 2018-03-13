@@ -1,11 +1,13 @@
 public class Weight extends Meter {
-    double minWeight, maxWeight;
+    private double minWeight, maxWeight;
 
     public Weight() {
     }
 
-    public Weight(String regNumber, boolean isWorking, String location) {
+    public Weight(String regNumber, boolean isWorking, String location, double minWeight, double maxWeight) {
         super(regNumber, isWorking, location);
+        setMinWeight(minWeight);
+        setMaxWeight(maxWeight);
     }
 
     public double getMinWeight() {
@@ -27,7 +29,19 @@ public class Weight extends Meter {
     }
 
     public String toString() {
-        return "(Måleintervall: " + getMinWeight() + " - " + getMaxWeight() + ")" + super.toString();
+        return "\nVekt\n(Måleintervall: " + getMinWeight() + " - " + getMaxWeight() + ")" + super.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Weight)) return false;
+
+        Weight weight = (Weight) o;
+
+        if (Double.compare(weight.getMinWeight(), getMinWeight()) != 0) return false;
+        return Double.compare(weight.getMaxWeight(), getMaxWeight()) == 0;
+    }
+
 
 }

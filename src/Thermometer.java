@@ -1,5 +1,5 @@
 public class Thermometer extends Meter {
-    int minTemp, maxTemp;
+    private int minTemp, maxTemp;
 
     public Thermometer(int minTemp, int maxTemp) {
         this.minTemp = minTemp;
@@ -30,7 +30,18 @@ public class Thermometer extends Meter {
 
     @Override
     public String toString() {
-        return  "(Min- og maks temp: " + getMinTemp() + " - " + getMaxTemp() + ")"
+        return  "\nTermometer\n(Min- og maks temp: " + getMinTemp() + " - " + getMaxTemp() + ")"
                 + super.toString();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Thermometer)) return false;
+
+        Thermometer that = (Thermometer) o;
+
+        if (getMinTemp() != that.getMinTemp()) return false;
+        return getMaxTemp() == that.getMaxTemp();
     }
 }
