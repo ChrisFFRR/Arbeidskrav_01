@@ -32,7 +32,7 @@ public class Thermometer extends Meter {
 
     @Override
     public String toString() {
-        return  "\nTermometer\n(Min- og maks temp: " + getMinTemp() + " - " + getMaxTemp() + ")"
+        return  "\nTermometer:\n(Min- og maks temp: " + getMinTemp() + " - " + getMaxTemp() + ")"
                 + super.toString();
     }
 

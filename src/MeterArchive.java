@@ -1,4 +1,3 @@
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +7,18 @@ public class MeterArchive {
 
     public MeterArchive() {
        instruments = new ArrayList<>();
+    }
+
+    public void fillList() {
+        addInstrument(new Clock("K01", true, "R101A1", 0.1));
+        addInstrument(new Clock("K02", true, "R102A1", 1));
+        addInstrument(new Clock("K03", true, "R103A1", 1.2));
+        addInstrument(new Thermometer("T01", true, "R101A2", -5, 10));
+        addInstrument(new Thermometer("T02", true, "R102A2", 0, 50));
+        addInstrument(new Thermometer("T03", true, "R103A2", 5, 30));
+        addInstrument(new Weight("V01", true, "R101A3", 0.5, 30));
+        addInstrument(new Weight("V02", true, "R102A3", 0.5, 30));
+        addInstrument(new Weight("V03", false, "R103A3", 0.5, 30));
     }
 
     public List<Meter> getAllInstruments() {

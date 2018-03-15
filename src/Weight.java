@@ -29,7 +29,7 @@ public class Weight extends Meter {
     }
 
     public String toString() {
-        return "\nVekt\n(Måleintervall: " + getMinWeight() + " - " + getMaxWeight() + ")" + super.toString();
+        return "\nVekt:\n(Måleintervall: " + getMinWeight() + " - " + getMaxWeight() + ")" + super.toString();
     }
 
     @Override

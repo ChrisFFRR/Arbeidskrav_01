@@ -23,7 +23,7 @@ public class Clock extends Meter {
     public String toString() {
 
 
-        return "\nKlokke\n(Minste tidsintervall: " + getMinTimeInterval() + "s)" + super.toString();
+        return "\nKlokke:\n(Minste tidsintervall: " + getMinTimeInterval() + "s)" + super.toString();
     }
 
 
