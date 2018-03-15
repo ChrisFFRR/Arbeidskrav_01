@@ -33,7 +33,7 @@ og bruker MeterArchive sine metoder beskrevet over på riktig måte.
 
 #Getting started
 
-Unzip, run mainclass "Client" and watch the magic happen in termial.
+run mainclass "Client" and watch the magic happen in terminal.
 
 #Author
 Christopher Marchand

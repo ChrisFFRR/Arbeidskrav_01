@@ -5,6 +5,8 @@ import java.util.List;
 Klasse for å holde Instrumenter. Inneholder metode som fyller Listen med klokke, vekt og termometer-objekter,
 og metoder som ved å iterere gjennom objekter i en List av type Meter, legger til, sletter, returnerer et eller alle objektene,
 forandrer plassering, forandrer status og tilslutt en toString som returnerer ut alle objektene i listen.
+
+Metodene inneholder system.out.prints for debugging formål.
  */
 public class MeterArchive {
    private List<Meter> instruments;
