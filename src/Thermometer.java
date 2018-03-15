@@ -1,6 +1,8 @@
 public class Thermometer extends Meter {
     private int minTemp, maxTemp;
 
+    public Thermometer() {}
+
     public Thermometer(int minTemp, int maxTemp) {
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;

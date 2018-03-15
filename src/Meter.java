@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Meter {
 
     private String regNumber, location;
@@ -53,5 +55,15 @@ public abstract class Meter {
         }
 
         return returnString;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Meter)) return false;
+        Meter meter = (Meter) o;
+        return isWorking == meter.isWorking &&
+                Objects.equals(regNumber, meter.regNumber) &&
+                Objects.equals(location, meter.location);
     }
 }

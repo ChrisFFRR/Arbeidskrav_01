@@ -46,6 +46,7 @@ public class MeterArchive {
     }
 
     public boolean changeLocation(String regNumber, String location) {
+
         for(Meter instrument : instruments) {
             if(regNumber.equals(instrument.getRegNumber())) {
                 instrument.setLocation(location);
