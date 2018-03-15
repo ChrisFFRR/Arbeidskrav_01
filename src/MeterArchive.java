@@ -24,7 +24,7 @@ public class MeterArchive {
         for(Meter instrument : instruments) {
             if(regNumber.equals(instrument.getRegNumber())) {
                 System.out.println("\nHenter instrument med regnummer: " + instrument.getRegNumber());
-                System.out.println(instrument.toString());
+                System.out.println(instrument.toString() + "\n");
                 return instrument;
             }
         }
@@ -63,7 +63,7 @@ public class MeterArchive {
         for(Meter instrument : instruments) {
             if(regNumber.equals(instrument.getRegNumber())) {
                 instrument.setWorking(false);
-                System.out.println("Setter instrument med regnummer " + instrument.getRegNumber() + "til ikke i orden:");
+                System.out.println("\nSetter instrument med regnummer " + instrument.getRegNumber() + " til ikke i orden:\n");
                 return true;
             }
         }

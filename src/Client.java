@@ -32,6 +32,8 @@ public class Client {
         System.out.println();
         test.removeInstrument("K10");
         test.removeInstrument("K01");
+        test.changeWorkingStatus("V02");
+        test.getInstrument("V02");
         System.out.println(test.toString());
         System.out.println();
 
