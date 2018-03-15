@@ -33,8 +33,11 @@ og bruker MeterArchive sine metoder beskrevet over på riktig måte.
 
 #Getting started
 
+option 1\
 run mainclass "Client" and watch the magic happen in terminal.
 
+option 2\
+open jar file in terminal/cmn (java -jar Arbeidskrav_01.jar) and watch the magic happen.
 #Author
 Christopher Marchand
 
