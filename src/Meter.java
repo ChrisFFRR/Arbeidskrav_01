@@ -1,5 +1,10 @@
 import java.util.Objects;
 
+/*
+Abstrakt superklasse inneholder: ikke-parametrisk og parametrisk konstruktør,
+getters'n'setters, toString og equals metoder
+ */
+
 public abstract class Meter {
 
     private String regNumber, location;

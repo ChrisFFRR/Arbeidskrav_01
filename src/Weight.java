@@ -1,3 +1,7 @@
+/*
+Subklasse av meter. Inneholder ikke noen funksjoner utenom standard oppsett.
+ */
+
 public class Weight extends Meter {
     private double minWeight, maxWeight;
 
