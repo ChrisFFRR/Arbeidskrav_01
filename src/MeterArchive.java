@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MeterArchive {
-    List<Meter> instruments;
+   private List<Meter> instruments;
 
     public MeterArchive() {
        instruments = new ArrayList<>();
@@ -47,15 +47,17 @@ public class MeterArchive {
 
     public boolean changeLocation(String regNumber, String location) {
 
+        System.out.println("Endrer posisjon for instrument med regnummer: " + regNumber);
         for(Meter instrument : instruments) {
             if(regNumber.equals(instrument.getRegNumber())) {
                 instrument.setLocation(location);
-                System.out.println("Endrer posisjon for instrument med regnummer: " + instrument.getRegNumber());
-                System.out.println("Endret!");
+                //System.out.println("Endrer posisjon for instrument med regnummer: " + instrument.getRegNumber());
+                System.out.println("Endret!\n");
                 System.out.println();
                 return true;
             }
         }
+        System.out.println("Ukjent regnummer!\n");
         return false;
     }
 

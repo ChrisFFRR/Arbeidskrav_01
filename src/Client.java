@@ -27,10 +27,10 @@ public class Client {
         System.out.println();
 
         test.removeInstrument("K10");
-        test.changeLocation("K01", "R101B1");
+        test.changeLocation("K00", "R101B1");
         System.out.println(test.toString());
         System.out.println();
-        test.removeInstrument("K10");
+        test.removeInstrument("K01");
         test.removeInstrument("K01");
         test.changeWorkingStatus("V02");
         test.getInstrument("V02");
@@ -38,20 +38,6 @@ public class Client {
         System.out.println();
 
         System.out.println(test.getAllInstruments());
-
-
-
-        //test.changeWorkingStatus("A01");
-
-
-
-
-        //test.removeInstrument(klokke.getRegNumber());
-
-
-
-        //System.out.println(test.getInstrument("A02").toString());
-
 
     }
 
