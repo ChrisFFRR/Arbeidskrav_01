@@ -20,9 +20,11 @@ public abstract class Meter {
         setLocation(location);
     }
 
+
     public String getRegNumber() {
         return regNumber;
     }
+
 
     public void setRegNumber(String regNumber) {
         this.regNumber = regNumber;
@@ -66,7 +68,9 @@ public abstract class Meter {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Meter)) return false;
+
         Meter meter = (Meter) o;
+
         return isWorking == meter.isWorking &&
                 Objects.equals(regNumber, meter.regNumber) &&
                 Objects.equals(location, meter.location);

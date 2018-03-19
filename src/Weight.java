@@ -6,6 +6,7 @@ public class Weight extends Meter {
     private double minWeight, maxWeight;
 
     public Weight() {
+        this("ukjent", false, "ukjent", 0, 0);
     }
 
     public Weight(String regNumber, boolean isWorking, String location, double minWeight, double maxWeight) {

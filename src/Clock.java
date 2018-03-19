@@ -6,6 +6,7 @@ public class Clock extends Meter {
     private double minTimeInterval;
 
     public Clock() {
+        this("ukjent", false, "ukjent",0);
     }
 
     public Clock(String regNumber, boolean isWorking, String location, double minTimeInterval) {

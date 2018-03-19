@@ -2,14 +2,15 @@
 Subklasse av meter. Inneholder ikke noen funksjoner utenom standard oppsett.
  */
 
+import java.util.Objects;
+
 public class Thermometer extends Meter {
     private int minTemp, maxTemp;
 
-    public Thermometer() {}
 
-    public Thermometer(int minTemp, int maxTemp) {
-        this.minTemp = minTemp;
-        this.maxTemp = maxTemp;
+
+    public Thermometer() {
+        this("ukjent", false, "ukjent", 0,0);
     }
 
     public Thermometer(String regNumber, boolean isWorking, String location, int minTemp, int maxTemp) {
@@ -46,8 +47,10 @@ public class Thermometer extends Meter {
         if (!(o instanceof Thermometer)) return false;
 
         Thermometer that = (Thermometer) o;
+        return Objects.equals(this.maxTemp, that.maxTemp) &&
+                Objects.equals(this.minTemp, that.minTemp);
 
-        if (getMinTemp() != that.getMinTemp()) return false;
-        return getMaxTemp() == that.getMaxTemp();
+
     }
+
 }
