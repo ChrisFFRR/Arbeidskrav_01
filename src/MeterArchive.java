@@ -36,7 +36,7 @@ public class MeterArchive {
     }
 
     public boolean addInstrument(Meter instrument) {
-
+    //Sjekk til å forsikre at alle registreringsnr er entydige.
         for(Meter meter : instruments) {
             if (instrument.getRegNumber().equals(meter.getRegNumber())) {
                 System.out.println("Regnummer " + meter.getRegNumber() + " i bruk");
