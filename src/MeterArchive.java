@@ -1,6 +1,7 @@
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /*
 Klasse for å holde Instrumenter. Inneholder metode som fyller Listen med klokke, vekt og termometer-objekter,
@@ -109,5 +110,13 @@ public class MeterArchive {
             s += instrument.toString() + "\n";
         }
         return s;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MeterArchive)) return false;
+        MeterArchive that = (MeterArchive) o;
+        return Objects.equals(instruments, that.instruments);
     }
 }
